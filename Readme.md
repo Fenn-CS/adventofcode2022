@@ -13,6 +13,21 @@ I have been adding my experience for each day in my commits, decided it would be
 
 ```
 Author: Fon E. Noel NFEBE <fenn25.fn@gmail.com>
+Date:   Wed Dec 7 22:19:17 2022 +0100
+
+    Day 4 solution part 2
+
+    Some more thought could be put into this, I believe
+    generating ranges makes the algorithm significantly slower.
+
+    However, given how much time I spent on part 1 of this problem
+    in 211b0b7626e27c810cf3f7696fb57fc2b9f7c2ab I just want to get past day 4.
+
+    Mind you, it's day 7.
+
+    Signed-off-by: Fon E. Noel NFEBE <fenn25.fn@gmail.com>
+
+Author: Fon E. Noel NFEBE <fenn25.fn@gmail.com>
 Date:   Wed Dec 7 21:52:56 2022 +0100
 
     Day 4 solution part 1

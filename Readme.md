@@ -9,6 +9,53 @@ See: [Advent of code](https://adventofcode.com/2022/about)
 
 I have been adding my experience for each day in my commits, decided it would be more fun to also put those here:
 
+### Day 5
+
+```
+commit 46c22b0b6927cb40a7071285de24d2ecde17cf8b (HEAD -> master)
+Author: Fon E. Noel NFEBE <fenn25.fn@gmail.com>
+Date:   Fri Dec 9 00:36:09 2022 +0100
+
+    Day 5 solution part 1
+
+    Actual solution for day5 part 1.
+
+    This is the first problem where I needed to run the test set
+    on my code to get the actual input right!
+
+    Maybe the lesson for day 5 is, ALWAYS RUN THE TEST SET.
+
+    - It helps me realize whether I captured the inputs in a way that
+    works for that example and in future for the inputs
+    - Let's you know if the algorithm works quickly
+
+    CONFESSION : I don't write down any algorithm, I just start coding.
+
+    Guess, I am learning the hard way, I am not that smart. Time to start
+    writing my psedu code down before attempting code???
+
+    Signed-off-by: Fon E. Noel NFEBE <fenn25.fn@gmail.com>
+
+commit 7b2a8445beaf4c3bec3f27a98190fe0e7df06e40
+Author: Fon E. Noel NFEBE <fenn25.fn@gmail.com>
+Date:   Fri Dec 9 00:33:02 2022 +0100
+
+    CRAY! : Input formatting day 5! 🙄
+
+    For day 5, I really wonder if the aim was for the actual
+    issue was for the elves to receive any help.
+
+    I mean, they really don't deserve it! Their input was poor
+    and terrible.
+
+    Shamefully, I spent about four hours over 2 days trying to
+    get the input in a sane way for me to use.
+
+    It's still terrible but it works!
+
+    Signed-off-by: Fon E. Noel NFEBE <fenn25.fn@gmail.com>
+```
+
 ### Day 4
 
 ```

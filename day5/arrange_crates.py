@@ -49,5 +49,30 @@ with open('input', 'r') as input:
             for j in range(0, numberOfStacks):
                 stacks[j].appendleft(currentCrates[j])
     
+# This is absolutely crazy
+# I spent 4 hours! Yes 4 hours trying to get the input organized in a useful and non-hacky way
+# I mean a way that could work for any number of crates
+# I feel like this problem is to test string manipulation or data extraction or WHAT? (YELLS)
+# Well now let's solve the actual problem
+# ===========================
 
+# Remove spaces on top so that, they are not moved as crates
+for stack in stacks:
+    while stack[-1] == 'None':
+        stack.pop()
+for instruction in moveAlgo:
+    move = int(instruction.get('move'))
+    fromStack = int(instruction.get('from')) - 1 # counting starts from 0, tell you children!
+    to = instruction.get('to') - 1
+    for i in range(0, move):
+        # print(move, fromStack, to) (optional print out to see moves)
+        if stacks[fromStack]:
+            crateInHand = stacks[fromStack].pop()
+            stacks[to].append(crateInHand)
+        # print(stacks) (optional print out to see state of stacks after each move)
+code = ''
+for stack in stacks:
+    if stack and stack[-1] != 'None':
+        code = code + stack[-1]
+print(code)
 

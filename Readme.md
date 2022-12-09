@@ -9,6 +9,71 @@ See: [Advent of code](https://adventofcode.com/2022/about)
 
 I have been adding my experience for each day in my commits, decided it would be more fun to also put those here:
 
+### Day 2 (Finally)
+
+It's 9 and I have not done day 7. Phew!
+
+```
+commit d1229d985f477434aeef053489a815cb7b01f2b7 (HEAD -> master)
+Author: Fon E. Noel NFEBE <fenn25.fn@gmail.com>
+Date:   Fri Dec 9 18:02:49 2022 +0100
+
+    Day 2 solution part 2
+
+    I tried to use my old solution, so in this case, I need to
+    take an input and map it to the corresponding that would yield
+    the desired result (win, draw, lose).
+
+    I got one rule wrong, and then used trial and error to get it
+    right. Looks like I don't like thinking about the R-P-S game!
+
+    Signed-off-by: Fon E. Noel NFEBE <fenn25.fn@gmail.com>
+
+commit eab7dc354253b69f6ecedb753acac8190ebf4f93 (origin/master)
+Author: Fon E. Noel NFEBE <fenn25.fn@gmail.com>
+Date:   Fri Dec 9 16:54:03 2022 +0100
+
+    Day 2 solution part 1
+
+    Rock-papper-scissors is a pretty straigfoward game.
+    The inputs where easy to capture.
+
+    BUT I GOT THE RULES WRONG. (Just like when you are being taught
+    a game, you stop the teacher and claim you have gotten it then
+    go ahead to get well beaten, yeah).
+
+    See why I got the rules wrong in commit : 921167b34edd8118c3a8131d4517669d742cbd74
+
+    Signed-off-by: Fon E. Noel NFEBE <fenn25.fn@gmail.com>
+
+commit 921167b34edd8118c3a8131d4517669d742cbd74
+Author: Fon E. Noel NFEBE <fenn25.fn@gmail.com>
+Date:   Fri Dec 9 16:15:37 2022 +0100
+
+    Day 2 Debug point
+
+    At this point, I was wondering what was wrong everything seemed
+    fined based on my defination of the problem.
+
+    I decided to debug my outputs againts : https://dev.to/doctorlai/avent-of-code-day-02-rock-paper-scissors-27d4
+
+    After comparing the outputs for the 2nd and 3rd lines it turns out I
+    forgot and important part of the problem.
+
+    Even though rock awards just a point (1) it still beats scissors which offers 3 points.
+
+    So translating each input and using it's weight would always result in a win for playing
+    scissors over rock!
+
+    APOLOGIES: The first time I read about ROCK PAPER SCISSORS was on this issue, so,
+    I really missed the rules for the game.
+
+    Well, well, HOPEFULLY that was it.
+
+    Signed-off-by: Fon E. Noel NFEBE <fenn25.fn@gmail.com>
+
+```
+
 ### Day 6
 
 ```

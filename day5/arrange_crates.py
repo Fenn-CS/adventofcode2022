@@ -49,7 +49,7 @@ with open('input', 'r') as input:
                     stacks.append(deque())
             for j in range(0, numberOfStacks):
                 stacks[j].appendleft(currentCrates[j])
-    
+
 # This is absolutely crazy
 # I spent 4 hours! Yes 4 hours trying to get the input organized in a useful and non-hacky way
 # I mean a way that could work for any number of crates
@@ -78,7 +78,7 @@ if len(sys.argv) > 1:
     elif sys.argv[1] == '2':
             for instruction in moveAlgo:
                 move = int(instruction.get('move'))
-                fromStack = int(instruction.get('from')) - 1 
+                fromStack = int(instruction.get('from')) - 1
                 to = instruction.get('to') - 1
                 temp = []
                 for i in range(0, move):

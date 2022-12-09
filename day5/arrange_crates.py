@@ -1,4 +1,5 @@
 # Problem statement: https://adventofcode.com/2022/day/5
+import sys
 stacks = []
 moveAlgo = []
 numberOfStacksKnown = False
@@ -54,25 +55,46 @@ with open('input', 'r') as input:
 # I mean a way that could work for any number of crates
 # I feel like this problem is to test string manipulation or data extraction or WHAT? (YELLS)
 # Well now let's solve the actual problem
+
 # ===========================
 
 # Remove spaces on top so that, they are not moved as crates
 for stack in stacks:
     while stack[-1] == 'None':
         stack.pop()
-for instruction in moveAlgo:
-    move = int(instruction.get('move'))
-    fromStack = int(instruction.get('from')) - 1 # counting starts from 0, tell you children!
-    to = instruction.get('to') - 1
-    for i in range(0, move):
-        # print(move, fromStack, to) (optional print out to see moves)
-        if stacks[fromStack]:
-            crateInHand = stacks[fromStack].pop()
-            stacks[to].append(crateInHand)
-        # print(stacks) (optional print out to see state of stacks after each move)
-code = ''
-for stack in stacks:
-    if stack and stack[-1] != 'None':
-        code = code + stack[-1]
-print(code)
+
+if len(sys.argv) > 1:
+    if sys.argv[1] == '1':
+        for instruction in moveAlgo:
+            move = int(instruction.get('move'))
+            fromStack = int(instruction.get('from')) - 1 # counting starts from 0, tell you children!
+            to = instruction.get('to') - 1
+            for i in range(0, move):
+                # print(move, fromStack, to) (optional print out to see moves)
+                if stacks[fromStack]:
+                    crateInHand = stacks[fromStack].pop()
+                    stacks[to].append(crateInHand)
+                # print(stacks) (optional print out to see state of stacks after each move)
+    elif sys.argv[1] == '2':
+            for instruction in moveAlgo:
+                move = int(instruction.get('move'))
+                fromStack = int(instruction.get('from')) - 1 
+                to = instruction.get('to') - 1
+                temp = []
+                for i in range(0, move):
+                    if stacks[fromStack]:
+                        crateInHand = stacks[fromStack].pop()
+                        temp.append(crateInHand)
+                while len(temp) > 0:
+                    stacks[to].append(temp.pop())
+                # print(stacks) (optional print out to see state of stacks after each move)
+    else:
+        print('What part? 😳')
+    code = ''
+    for stack in stacks:
+        if stack and stack[-1] != 'None':
+            code = code + stack[-1]
+    print(code)
+else:
+    print('Please run the script with a command line arg, 1 or 2 to run part 1 or two respectively')
 

@@ -12,6 +12,27 @@ I have been adding my experience for each day in my commits, decided it would be
 ### Day 5
 
 ```
+commit d08fb976d0e7ac0f8cc69616520406dff97be30b (HEAD -> master)
+Author: Fon E. Noel NFEBE <fenn25.fn@gmail.com>
+Date:   Fri Dec 9 01:03:53 2022 +0100
+
+    Day 5 solution part 2
+
+    Well not so hard given part 1 was already done.
+
+    However, this is probably not efficient and VERY WET!
+
+    If my colleage [Liam](https://github.com/liam-lloyd) were
+    to look at this code he would have lot of ideas on how I could
+    make things DRY like he does with my code at work :).
+
+    Well, sorry Liam and DRY-code warriors, day 5 was long overdue.
+
+    See you day 6.
+
+    Signed-off-by: Fon E. Noel NFEBE <fenn25.fn@gmail.com>
+
+
 commit 46c22b0b6927cb40a7071285de24d2ecde17cf8b (HEAD -> master)
 Author: Fon E. Noel NFEBE <fenn25.fn@gmail.com>
 Date:   Fri Dec 9 00:36:09 2022 +0100

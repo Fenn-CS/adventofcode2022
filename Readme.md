@@ -9,6 +9,35 @@ See: [Advent of code](https://adventofcode.com/2022/about)
 
 I have been adding my experience for each day in my commits, decided it would be more fun to also put those here:
 
+### Day 6
+
+```
+commit 732bf8b3c0b756329a283a1cc8dac3f5d8d3ca5f (HEAD -> master)
+Author: Fon E. Noel NFEBE <fenn25.fn@gmail.com>
+Date:   Fri Dec 9 12:58:44 2022 +0100
+
+    Day 6 solution part 2
+
+    Simply added a generalized fucntion which does same thing
+    as in part 1 using a different parameter (14 in this case)
+
+    Signed-off-by: Fon E. Noel NFEBE <fenn25.fn@gmail.com>
+
+commit 0a4e2715347e5b62e4ead86fce5d9053217794a1
+Author: Fon E. Noel NFEBE <fenn25.fn@gmail.com>
+Date:   Fri Dec 9 12:41:41 2022 +0100
+
+    Day 6 solution part 1
+
+    This is pretty straight forward, my alogorithm needs to be
+    stress-tested to see how it perfoms when the stream is too large
+    and the packet market is burried right within.
+
+    Signed-off-by: Fon E. Noel NFEBE <fenn25.fn@gmail.com>
+
+```
+
+
 ### Day 5
 
 ```

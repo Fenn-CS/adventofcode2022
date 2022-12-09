@@ -8,24 +8,26 @@ options = {
     'Z':3
 }
 
-
-
 def rockPaperScissors(inputs):
-    firstPlay =  options.get(inputs[0])
-    secondPlay = options.get(inputs[1])
-    if firstPlay > secondPlay:
-        score = firstPlay + 6
-        return {'winner':1, 'winner_score':score, 'loser_score':secondPlay, 'inputs':inputs, 'translated_inputs':(firstPlay, secondPlay) }
-    elif firstPlay == secondPlay:
-        score = firstPlay + 3
-        return {'winner':0, 'winner_score':score, 'inputs':inputs, 'translated_inputs':(firstPlay, secondPlay)}
+    firstPlayWeight =  options.get(inputs[0])
+    secondPlayWeight = options.get(inputs[1])
+
+    if firstPlayWeight == secondPlayWeight:
+        score = firstPlayWeight + 3
+        return {'winner':0, 'winner_score':score, 'inputs':inputs, 'translated_inputs':(firstPlayWeight, secondPlayWeight)}
+    if firstPlayWeight == 1 and secondPlayWeight != 2:
+            return {'winner':1, 'winner_score':7, 'loser_score':secondPlayWeight, 'inputs':inputs, 'translated_inputs':(firstPlayWeight, secondPlayWeight) }
+    if secondPlayWeight == 1 and firstPlayWeight != 2:
+            return {'winner':2, 'winner_score':7, 'loser_score':firstPlayWeight, 'inputs':inputs, 'translated_inputs':(firstPlayWeight, secondPlayWeight) }
+    if firstPlayWeight > secondPlayWeight:
+            score = firstPlayWeight + 0
+            return  {'winner':1, 'winner_score':score, 'loser_score':secondPlayWeight, 'inputs':inputs, 'translated_inputs':(firstPlayWeight, secondPlayWeight) }
     else:
-        score = secondPlay + 6
-        return {'winner':2, 'winner_score':score, 'loser_score':firstPlay, 'inputs':inputs, 'translated_inputs':(firstPlay, secondPlay)}
+        score = secondPlayWeight + 6
+        return {'winner':2, 'winner_score':score, 'loser_score':firstPlayWeight, 'inputs':inputs, 'translated_inputs':(firstPlayWeight, secondPlayWeight)}
 
 roundScores = []
 rounds = []
-totalScore = 0
 count = 1
 with open('input', 'r') as input:
     for line in input:
@@ -39,20 +41,9 @@ with open('input', 'r') as input:
             winner = result.get('winner')
             if winner == 2 or winner  == 0:
                 roundScores.append(result.get('winner_score'))
-                totalScore = totalScore + result.get('winner_score')
-                print("Round {} score {}".format(count, result.get('winner_score')))
             else:
                 roundScores.append(result.get('loser_score'))
-                totalScore = totalScore + result.get('loser_score')
-                print("Round {} score {}".format(count, result.get('loser_score')))
-            print(result)
-            print(totalScore)
-            if totalScore == 10310:
-                print("Round scores : {}".format(len(roundScores)))
             count = count +1
-print(totalScore)
-print(len(rounds))
-print(len(roundScores))
 if len(rounds) != len(roundScores):
     raise Exception('Rounds and rounds results don\'t match')
 else:

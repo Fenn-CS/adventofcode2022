@@ -49,3 +49,27 @@ def checkSizeMaxes100k(node):
 _, max100kSizes, _ = rootFolder.traverse(checkSizeMaxes100k)
 print(max100kSizes)
 print(sum(max100kSizes))
+
+
+# Part 2
+sizeOfRoot = rootFolder.getSize()
+freeSpace = 70000000 - sizeOfRoot
+requiredSpace = 30000000 - freeSpace
+
+print("Required space is {}".format(requiredSpace))
+def checkAtLeast(node, size):
+    node = node.get('item')
+    if hasattr(node, 'getSize'):
+        fSize = node.getSize()
+        if fSize >= size and node.parent is not None:
+            return fSize
+        return 0
+    return 0
+
+def checkRequiredSpace(node):
+    return checkAtLeast(node, requiredSpace)
+
+_, hasEnoughSpace, _ = rootFolder.traverse(checkRequiredSpace)
+hasEnoughSpace = list(filter(lambda x: x != 0, hasEnoughSpace))
+print(hasEnoughSpace)
+print(min(hasEnoughSpace))

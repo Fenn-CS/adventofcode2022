@@ -9,6 +9,55 @@ See: [Advent of code](https://adventofcode.com/2022/about)
 
 I have been adding my experience for each day in my commits, decided it would be more fun to also put those here:
 
+### Day 7
+
+```
+commit c25c2c88582fde616e8942dac35bc23dd753317a (HEAD -> master)
+Author: Fon E. Noel NFEBE <fenn25.fn@gmail.com>
+Date:   Sun Dec 11 02:21:25 2022 +0100
+
+    Day 7 solution part 2
+
+    Again, my fancy file system was of much use! I just
+    needed to added a method which I can pass to traverse!
+
+    Sweet! (Performance checks required)
+
+    Signed-off-by: Fon E. Noel NFEBE <fenn25.fn@gmail.com>
+
+commit 437ea8dea95dea59652d477a2fa53ffe13850455 (origin/master)
+Author: Fon E. Noel NFEBE <fenn25.fn@gmail.com>
+Date:   Sun Dec 11 01:59:46 2022 +0100
+
+    Day 7 solution part 1
+
+    As imagined, my fancy filesytem added in
+    fa66d79993cf7cb71c272a9e3f900de20823bff5 made this pretty much
+    painless.
+
+    Signed-off-by: Fon E. Noel NFEBE <fenn25.fn@gmail.com>
+
+commit fa66d79993cf7cb71c272a9e3f900de20823bff5
+Author: Fon E. Noel NFEBE <fenn25.fn@gmail.com>
+Date:   Sat Dec 10 23:14:45 2022 +0100
+
+    Day 7, my fancy file system
+
+    Sounding like I did something big, "Well, I
+    designed this file system because I believe it's
+    going to be of excessive use in the actual problem
+    of finding large files. I rest my case"
+
+    Actual commit message:
+
+    - This is just a generalized tree implementation
+    with a traverse function that can basically do anything
+    it may be useful in solving day 7.
+
+    Signed-off-by: Fon E. Noel NFEBE <fenn25.fn@gmail.com>
+
+```
+
 ### Day 2 (Finally)
 
 It's 9 and I have not done day 7. Phew!
